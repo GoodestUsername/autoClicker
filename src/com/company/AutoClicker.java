@@ -44,12 +44,12 @@ class autoClicker implements Runnable {
     }
 
     // get whether or not auto clicker is on
-    public static boolean getIsAutoClicking() {
+    public static boolean getIsAutoClickingRunning() {
         return isClicking;
     }
 
     // set whether or not auto clicker is on
-    public static void setIsAutoClicking (boolean isClicking){
+    public static void setIsAutoClickingRunning(boolean isClicking){
         autoClicker.isClicking = isClicking;
     }
 
@@ -67,7 +67,7 @@ class autoClicker implements Runnable {
     public static void startAutoClicker() {
         autoClicker autoClicker = new autoClicker();
         Thread clicker = new Thread(autoClicker);
-        setIsAutoClicking(true);
+        setIsAutoClickingRunning(true);
         clicker.start();
     }
 }
