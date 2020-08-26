@@ -17,7 +17,7 @@ public class keyboardListeners implements NativeKeyListener, ActionListener {
                 System.out.println(e.getActionCommand());
                 break;
             case "start":
-                if (!autoClicker.getIsAutoClicking()) {
+                if (!autoClicker.getIsAutoClickingRunning()) {
                     autoClicker.setIsAutoClickingRunning(true);
                     autoClicker.startAutoClicker();
                 }
@@ -37,7 +37,7 @@ public class keyboardListeners implements NativeKeyListener, ActionListener {
     public void nativeKeyPressed(NativeKeyEvent key) {
         // When 1 is pressed Start clicking
         if (key.getKeyCode() == NativeKeyEvent.VC_1) {
-            if (!autoClicker.getIsAutoClicking()) {
+            if (!autoClicker.getIsAutoClickingRunning()) {
                 autoClicker.setIsAutoClickingRunning(true);
                 autoClicker.startAutoClicker();
                 System.out.println("1 pressed, started clicking!");
