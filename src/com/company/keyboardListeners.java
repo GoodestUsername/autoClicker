@@ -5,8 +5,10 @@ import org.jnativehook.keyboard.NativeKeyListener;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
 
-public class keyboardListeners implements NativeKeyListener, ActionListener {
+public class keyboardListeners implements NativeKeyListener, ActionListener, PropertyChangeListener {
 
     // gui button controller
     @Override
@@ -59,6 +61,11 @@ public class keyboardListeners implements NativeKeyListener, ActionListener {
 
     @Override
     public void nativeKeyReleased(NativeKeyEvent nativeKeyEvent) {
+
+    }
+
+    @Override
+    public void propertyChange(PropertyChangeEvent evt) {
 
     }
 }
